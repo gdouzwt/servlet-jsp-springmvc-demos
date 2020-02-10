@@ -1,0 +1,33 @@
+package io.zwt.servlet.app11a.servlet;
+
+import javax.servlet.AsyncContext;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(name = "AsyncDispatchServlet",
+        urlPatterns = {"/asyncDispatch"},
+        asyncSupported = true)
+public class AsyncDispatchServlet extends HttpServlet {
+    private static final long serialVersionUID = 222L;
+
+    @Override
+    public void doGet(final HttpServletRequest request,
+                      HttpServletResponse response) {
+        final AsyncContext asyncContext = request.startAsync();
+        request.setAttribute("mainThread",
+                Thread.currentThread().getName());
+        asyncContext.setTimeout(5000);
+        asyncContext.start(() -> {
+            // long-running task
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException ignored) {
+            }
+            request.setAttribute("workerThread",
+                    Thread.currentThread().getName());
+            asyncContext.dispatch("/app11a/threadNames.jsp");
+        });
+    }
+}
