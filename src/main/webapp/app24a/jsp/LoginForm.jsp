@@ -8,7 +8,7 @@
 </head>
 <body>
 <div id="global">
-<form:form commandName="login" action="login" method="post">
+<form:form modelAttribute="login" action="login" method="post">
     <fieldset>
         <legend>Login</legend>
         <p>
