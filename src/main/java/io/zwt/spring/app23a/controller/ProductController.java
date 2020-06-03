@@ -20,7 +20,7 @@ import java.util.List;
 public class ProductController {
 
     private static final Log logger = LogFactory
-            .getLog(ProductController.class);
+        .getLog(ProductController.class);
 
     @RequestMapping(value = "/product_input")
     public String inputProduct(Model model) {
@@ -44,7 +44,7 @@ public class ProductController {
                 fileNames.add(fileName);
 
                 File imageFile = new File(servletRequest.getServletContext()
-                        .getRealPath("/img"), fileName);
+                    .getRealPath("/img"), fileName);
                 try {
                     multipartFile.transferTo(imageFile);
                 } catch (IOException e) {

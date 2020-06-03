@@ -10,16 +10,16 @@ import java.util.Set;
 
 @HandlesTypes({UsefulServlet.class})
 public class MyServletContainerInitializer implements
-        ServletContainerInitializer {
+    ServletContainerInitializer {
 
     @Override
     public void onStartup(Set<Class<?>> classes, ServletContext
-            servletContext) {
+        servletContext) {
 
         System.out.println("onStartup");
         ServletRegistration registration =
-                servletContext.addServlet("usefulServlet",
-                        "io.zwt.servlet.app14b.servlet.UsefulServlet");
+            servletContext.addServlet("usefulServlet",
+                "io.zwt.servlet.app14b.servlet.UsefulServlet");
         registration.addMapping("/useful");
         System.out.println("leaving onStartup");
     }

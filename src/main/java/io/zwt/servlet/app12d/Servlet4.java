@@ -18,7 +18,7 @@ public class Servlet4 extends HttpServlet {
 
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response) throws ServletException,
-            IOException {
+        IOException {
         RequestDispatcher dispatcher = request.getRequestDispatcher("/app12d/jsp/1.jsp");
         dispatcher.forward(request, response);
     }

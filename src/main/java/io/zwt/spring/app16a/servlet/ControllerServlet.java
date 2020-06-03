@@ -17,7 +17,7 @@ public class ControllerServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response)
-            throws IOException, ServletException {
+        throws IOException, ServletException {
         request.setCharacterEncoding("UTF8");
         response.setCharacterEncoding("UTF8");
         process(request, response);
@@ -26,7 +26,7 @@ public class ControllerServlet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request,
                        HttpServletResponse response)
-            throws IOException, ServletException {
+        throws IOException, ServletException {
         request.setCharacterEncoding("UTF8");
         response.setCharacterEncoding("UTF8");
         process(request, response);
@@ -34,7 +34,7 @@ public class ControllerServlet extends HttpServlet {
 
     private void process(HttpServletRequest request,
                          HttpServletResponse response)
-            throws IOException, ServletException {
+        throws IOException, ServletException {
 
         String uri = request.getRequestURI();
         /*
@@ -55,7 +55,7 @@ public class ControllerServlet extends HttpServlet {
             // populate action properties
             productForm.setName(request.getParameter("name"));
             productForm.setDescription(
-                    request.getParameter("description"));
+                request.getParameter("description"));
             productForm.setPrice(request.getParameter("price"));
 
             // create model
@@ -64,7 +64,7 @@ public class ControllerServlet extends HttpServlet {
             product.setDescription(productForm.getDescription());
             try {
                 product.setPrice(Float.parseFloat(
-                        productForm.getPrice()));
+                    productForm.getPrice()));
             } catch (NumberFormatException ignored) {
             }
 
@@ -83,7 +83,7 @@ public class ControllerServlet extends HttpServlet {
         }
         if (dispatchUrl != null) {
             RequestDispatcher rd =
-                    request.getRequestDispatcher(dispatchUrl);
+                request.getRequestDispatcher(dispatchUrl);
             rd.forward(request, response);
         }
     }

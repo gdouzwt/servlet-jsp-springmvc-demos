@@ -24,9 +24,9 @@ public class ImageController {
                          @RequestHeader String referer) {
         if (referer != null) {
             String imageDirectory = request.getServletContext().
-                    getRealPath("/img");
+                getRealPath("/img");
             File file = new File(imageDirectory,
-                    id + ".jpg");
+                id + ".jpg");
             if (file.exists()) {
                 response.setContentType("image/jpg");
                 byte[] buffer = new byte[1024];

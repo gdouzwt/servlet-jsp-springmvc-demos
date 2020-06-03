@@ -17,7 +17,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class ProductController {
 
     private static final Log logger = LogFactory
-            .getLog(ProductController.class);
+        .getLog(ProductController.class);
 
     @Autowired
     private ProductService productService;

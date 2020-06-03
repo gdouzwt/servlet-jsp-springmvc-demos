@@ -22,7 +22,7 @@ public class FormServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response)
-            throws IOException {
+        throws IOException {
         response.setContentType("text/html");
         PrintWriter writer = response.getWriter();
         writer.println("<html>");
@@ -38,7 +38,7 @@ public class FormServlet extends HttpServlet {
         writer.println("<tr>");
         writer.println("<td>Address:</td>");
         writer.println("<td><textarea name='address' "
-                + "cols='40' rows='5'></textarea></td>");
+            + "cols='40' rows='5'></textarea></td>");
         writer.println("</tr>");
         writer.println("<tr>");
         writer.println("<td>Country:</td>");
@@ -50,32 +50,32 @@ public class FormServlet extends HttpServlet {
         writer.println("<tr>");
         writer.println("<td>Delivery Method:</td>");
         writer.println("<td><input type='radio' " +
-                "name='deliveryMethod'"
-                + " value='First Class'/>First Class");
+            "name='deliveryMethod'"
+            + " value='First Class'/>First Class");
         writer.println("<input type='radio' " +
-                "name='deliveryMethod' "
-                + "value='Second Class'/>Second Class</td>");
+            "name='deliveryMethod' "
+            + "value='Second Class'/>Second Class</td>");
         writer.println("</tr>");
         writer.println("<tr>");
         writer.println("<td>Shipping Instructions:</td>");
         writer.println("<td><textarea name='instruction' "
-                + "cols='40' rows='5'></textarea></td>");
+            + "cols='40' rows='5'></textarea></td>");
         writer.println("</tr>");
         writer.println("<tr>");
         writer.println("<td>&nbsp;</td>");
         writer.println("<td><textarea name='instruction' "
-                + "cols='40' rows='5'></textarea></td>");
+            + "cols='40' rows='5'></textarea></td>");
         writer.println("</tr>");
         writer.println("<tr>");
         writer.println("<td>Please send me the latest " +
-                "product catalog:</td>");
+            "product catalog:</td>");
         writer.println("<td><input type='checkbox' " +
-                "name='catalogRequest'/></td>");
+            "name='catalogRequest'/></td>");
         writer.println("</tr>");
         writer.println("<tr>");
         writer.println("<td>&nbsp;</td>");
         writer.println("<td><input type='reset'/>" +
-                "<input type='submit'/></td>");
+            "<input type='submit'/></td>");
         writer.println("</tr>");
         writer.println("</table>");
         writer.println("</form>");
@@ -86,7 +86,7 @@ public class FormServlet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request,
                        HttpServletResponse response)
-            throws IOException {
+        throws IOException {
         response.setContentType("text/html");
         PrintWriter writer = response.getWriter();
         writer.println("<html>");
@@ -98,23 +98,23 @@ public class FormServlet extends HttpServlet {
         writer.println("<tr>");
         writer.println("<td>Name:</td>");
         writer.println("<td>" + request.getParameter("name")
-                + "</td>");
+            + "</td>");
         writer.println("</tr>");
         writer.println("<tr>");
         writer.println("<td>Address:</td>");
         writer.println("<td>" + request.getParameter("address")
-                + "</td>");
+            + "</td>");
         writer.println("</tr>");
         writer.println("<tr>");
         writer.println("<td>Country:</td>");
         writer.println("<td>" + request.getParameter("country")
-                + "</td>");
+            + "</td>");
         writer.println("</tr>");
         writer.println("<tr>");
         writer.println("<td>Shipping Instructions:</td>");
         writer.println("<td>");
         String[] instructions = request
-                .getParameterValues("instruction");
+            .getParameterValues("instruction");
         if (instructions != null) {
             for (String instruction : instructions) {
                 writer.println(instruction + "<br/>");
@@ -125,8 +125,8 @@ public class FormServlet extends HttpServlet {
         writer.println("<tr>");
         writer.println("<td>Delivery Method:</td>");
         writer.println("<td>"
-                + request.getParameter("deliveryMethod")
-                + "</td>");
+            + request.getParameter("deliveryMethod")
+            + "</td>");
         writer.println("</tr>");
         writer.println("<tr>");
         writer.println("<td>Catalog Request:</td>");
@@ -140,16 +140,16 @@ public class FormServlet extends HttpServlet {
         writer.println("</tr>");
         writer.println("</table>");
         writer.println("<div style='border:1px solid #ddd;" +
-                "margin-top:40px;font-size:90%'>");
+            "margin-top:40px;font-size:90%'>");
 
         writer.println("Debug Info<br/>");
         Enumeration<String> parameterNames = request
-                .getParameterNames();
+            .getParameterNames();
         while (parameterNames.hasMoreElements()) {
             String paramName = parameterNames.nextElement();
             writer.println(paramName + ": ");
             String[] paramValues = request
-                    .getParameterValues(paramName);
+                .getParameterValues(paramName);
             for (String paramValue : paramValues) {
                 writer.println(paramValue + "<br/>");
             }

@@ -1,10 +1,9 @@
 package io.zwt.spring.app23b.validator;
 
+import io.zwt.spring.app23b.domain.Product;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
-
-import io.zwt.spring.app23b.domain.Product;
 
 public class ProductValidator implements Validator {
 

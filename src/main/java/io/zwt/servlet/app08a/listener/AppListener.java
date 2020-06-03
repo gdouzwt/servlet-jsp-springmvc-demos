@@ -19,7 +19,7 @@ public class AppListener implements ServletContextListener {
         ServletContext servletContext = sce.getServletContext();
 
         Map<String, String> countries =
-                new HashMap<String, String>();
+            new HashMap<String, String>();
         countries.put("ca", "Canada");
         countries.put("us", "United States");
         servletContext.setAttribute("countries", countries);

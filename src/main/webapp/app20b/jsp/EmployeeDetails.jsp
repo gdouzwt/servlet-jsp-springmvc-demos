@@ -2,17 +2,17 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Save Employee</title>
+    <title>Save Employee</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
 </head>
 <body>
 <div id="global">
     <h4>The employee details have been saved.</h4>
     <p>
-        <h5>Details:</h5>
-        First Name: ${employee.firstName}<br/>
-        Last Name: ${employee.lastName}<br/>
-        Date of Birth: ${employee.birthDate}
+    <h5>Details:</h5>
+    First Name: ${employee.firstName}<br/>
+    Last Name: ${employee.lastName}<br/>
+    Date of Birth: ${employee.birthDate}
     </p>
 </div>
 </body>

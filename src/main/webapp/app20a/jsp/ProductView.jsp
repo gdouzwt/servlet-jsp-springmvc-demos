@@ -2,17 +2,17 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>View Product</title>
+    <title>View Product</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
 </head>
 <body>
 <div id="global">
     <h4>${message}</h4>
     <p>
-        <h5>Details:</h5>
-        Product Name: ${product.name}<br/>
-        Description: ${product.description}<br/>
-        Price: $${product.price}
+    <h5>Details:</h5>
+    Product Name: ${product.name}<br/>
+    Description: ${product.description}<br/>
+    Price: $${product.price}
     </p>
 </div>
 </body>

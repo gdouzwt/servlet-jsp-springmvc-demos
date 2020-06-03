@@ -21,9 +21,9 @@ public class PerfStatListener implements ServletRequestListener {
         Long start = (Long) servletRequest.getAttribute("start");
         Long end = System.nanoTime();
         HttpServletRequest httpServletRequest =
-                (HttpServletRequest) servletRequest;
+            (HttpServletRequest) servletRequest;
         String uri = httpServletRequest.getRequestURI();
         System.out.println("time taken to execute " + uri +
-                ":" + ((end - start) / 1000) + "microseconds");
+            ":" + ((end - start) / 1000) + "microseconds");
     }
 }

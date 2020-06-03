@@ -2,6 +2,7 @@
     public void jspInit() {
         System.out.println("jspInit ...");
     }
+
     public void jspDestroy() {
         System.out.println("jspDestroy ...");
     }

@@ -41,7 +41,7 @@ public class EmployeeServlet extends HttpServlet {
         request.setAttribute("capitals", capitals);
 
         RequestDispatcher rd =
-                request.getRequestDispatcher("/app04a/employee.jsp");
+            request.getRequestDispatcher("/app04a/employee.jsp");
         rd.forward(request, response);
     }
 }

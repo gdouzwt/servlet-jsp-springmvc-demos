@@ -24,19 +24,19 @@ public class DynRegListener implements ServletContextListener {
         FirstServlet firstServlet = null;
         try {
             firstServlet =
-                    servletContext.createServlet(FirstServlet.class);
+                servletContext.createServlet(FirstServlet.class);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         if (firstServlet != null) {
             firstServlet.setName(
-                    "Dynamically registered servlet");
+                "Dynamically registered servlet");
         }
 
         // the servlet may not be annotated with @WebServlet
         ServletRegistration.Dynamic dynamic = servletContext.
-                addServlet("firstServlet", firstServlet);
+            addServlet("firstServlet", firstServlet);
         dynamic.addMapping("/dynamic");
     }
 }

@@ -23,7 +23,7 @@ public class ResourceController {
     public String login(@ModelAttribute Login login, HttpSession session, Model model) {
         model.addAttribute("login", new Login());
         if ("paul".equals(login.getUserName()) &&
-                "secret".equals(login.getPassword())) {
+            "secret".equals(login.getPassword())) {
             session.setAttribute("loggedIn", Boolean.TRUE);
             return "Main";
         } else {
@@ -35,16 +35,16 @@ public class ResourceController {
     public String downloadResource(HttpSession session, HttpServletRequest request,
                                    HttpServletResponse response) {
         if (session == null ||
-                session.getAttribute("loggedIn") == null) {
+            session.getAttribute("loggedIn") == null) {
             return "LoginForm";
         }
         String dataDirectory = request.
-                getServletContext().getRealPath("/data");
+            getServletContext().getRealPath("/data");
         File file = new File(dataDirectory, "secret.pdf");
         if (file.exists()) {
             response.setContentType("application/pdf");
             response.addHeader("Content-Disposition",
-                    "attachment; filename=secret.pdf");
+                "attachment; filename=secret.pdf");
             byte[] buffer = new byte[1024];
             // if using Java 7, use try-with-resources
             try (FileInputStream fis = new FileInputStream(file); BufferedInputStream bis = new BufferedInputStream(fis)) {

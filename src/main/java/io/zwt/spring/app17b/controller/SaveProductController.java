@@ -25,9 +25,9 @@ public class SaveProductController implements Controller {
         ProductForm productForm = new ProductForm();
         // populate action properties
         productForm.setName(
-                request.getParameter("name"));
+            request.getParameter("name"));
         productForm.setDescription(
-                request.getParameter("description"));
+            request.getParameter("description"));
         productForm.setPrice(request.getParameter("price"));
 
         // create model
@@ -36,7 +36,7 @@ public class SaveProductController implements Controller {
         product.setDescription(productForm.getDescription());
         try {
             product.setPrice(Float.parseFloat(
-                    productForm.getPrice()));
+                productForm.getPrice()));
         } catch (NumberFormatException ignored) {
         }
 

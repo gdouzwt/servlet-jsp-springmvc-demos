@@ -35,7 +35,7 @@ public class ProductController {
             logger.info("has errors");
             FieldError fieldError = bindingResult.getFieldError();
             logger.info("Code:" + fieldError.getCode()
-                    + ", field:" + fieldError.getField());
+                + ", field:" + fieldError.getField());
 
             return "ProductForm";
         }

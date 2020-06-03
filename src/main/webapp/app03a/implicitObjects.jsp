@@ -8,16 +8,16 @@
          e.hasMoreElements(); ) {
         String header = e.nextElement();
         out.println(header + ": " + request.getHeader(header) +
-                "<br/>");
+            "<br/>");
     }
 %>
 <hr/>
 <%
     out.println("Buffer size: " + response.getBufferSize() +
-            "<br/>");
+        "<br/>");
     out.println("Session id: " + session.getId() + "<br/>");
     out.println("Servlet name: " + config.getServletName() +
-            "<br/>");
+        "<br/>");
     out.println("Server info: " + application.getServerInfo());
 %>
 </body>

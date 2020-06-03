@@ -13,22 +13,22 @@ public class AsyncCompleteServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response)
-            throws IOException {
+        throws IOException {
         response.setContentType("text/html");
         final PrintWriter writer = response.getWriter();
         writer.println("<html><head><title>" +
-                "Async Servlet</title></head>");
+            "Async Servlet</title></head>");
         writer.println("<body><div id='progress'></div>");
         final AsyncContext asyncContext = request.startAsync();
         asyncContext.setTimeout(60000);
         asyncContext.start(() -> {
             System.out.println("new thread:" +
-                    Thread.currentThread());
+                Thread.currentThread());
             for (int i = 0; i < 10; i++) {
                 writer.println("<script>");
                 writer.println("document.getElementById(" +
-                        "'progress').innerHTML = '" +
-                        (i * 10) + "% complete'");
+                    "'progress').innerHTML = '" +
+                    (i * 10) + "% complete'");
                 writer.println("</script>");
                 writer.flush();
                 try {
@@ -38,7 +38,7 @@ public class AsyncCompleteServlet extends HttpServlet {
             }
             writer.println("<script>");
             writer.println("document.getElementById(" +
-                    "'progress').innerHTML = 'DONE'");
+                "'progress').innerHTML = 'DONE'");
             writer.println("</script>");
             writer.println("</body></html>");
             asyncContext.complete();

@@ -13,7 +13,7 @@ import java.util.List;
  * Not thread-safe. For illustration purpose only
  */
 @WebServlet(name = "CustomerServlet", urlPatterns = {
-        "/customer", "/editCustomer", "/updateCustomer"})
+    "/customer", "/editCustomer", "/updateCustomer"})
 public class CustomerServlet extends HttpServlet {
     private static final long serialVersionUID = -20L;
 
@@ -35,17 +35,17 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void sendCustomerList(HttpServletResponse response)
-            throws IOException {
+        throws IOException {
         response.setContentType("text/html");
         PrintWriter writer = response.getWriter();
         writer.println("<html><head><title>Customers</title></head>"
-                + "<body><h2>Customers </h2>");
+            + "<body><h2>Customers </h2>");
         writer.println("<ul>");
         for (Customer customer : customers) {
             writer.println("<li>" + customer.getName()
-                    + "(" + customer.getCity() + ") ("
-                    + "<a href='editCustomer?id=" + customer.getId()
-                    + "'>edit</a>)");
+                + "(" + customer.getCity() + ") ("
+                + "<a href='editCustomer?id=" + customer.getId()
+                + "'>edit</a>)");
         }
         writer.println("</ul>");
         writer.println("</body></html>");
@@ -68,35 +68,35 @@ public class CustomerServlet extends HttpServlet {
         int customerId = 0;
         try {
             customerId =
-                    Integer.parseInt(request.getParameter("id"));
+                Integer.parseInt(request.getParameter("id"));
         } catch (NumberFormatException ignored) {
         }
         Customer customer = getCustomer(customerId);
 
         if (customer != null) {
             writer.println("<html><head>"
-                    + "<title>Edit Customer</title></head>"
-                    + "<body><h2>Edit Customer</h2>"
-                    + "<form method='post' "
-                    + "action='updateCustomer'>");
+                + "<title>Edit Customer</title></head>"
+                + "<body><h2>Edit Customer</h2>"
+                + "<form method='post' "
+                + "action='updateCustomer'>");
             writer.println("<input type='hidden' name='id' value='"
-                    + customerId + "'/>");
+                + customerId + "'/>");
             writer.println("<table>");
             writer.println("<tr><td>Name:</td><td>"
-                    + "<input name='name' value='" +
-                    customer.getName().replaceAll("'", "&#39;")
-                    + "'/></td></tr>");
+                + "<input name='name' value='" +
+                customer.getName().replaceAll("'", "&#39;")
+                + "'/></td></tr>");
             writer.println("<tr><td>City:</td><td>"
-                    + "<input name='city' value='" +
-                    customer.getCity().replaceAll("'", "&#39;")
-                    + "'/></td></tr>");
+                + "<input name='city' value='" +
+                customer.getCity().replaceAll("'", "&#39;")
+                + "'/></td></tr>");
             writer.println("<tr>"
-                    + "<td colspan='2' style='text-align:right'>"
-                    + "<input type='submit' value='Update'/></td>"
-                    + "</tr>");
+                + "<td colspan='2' style='text-align:right'>"
+                + "<input type='submit' value='Update'/></td>"
+                + "</tr>");
             writer.println("<tr><td colspan='2'>"
-                    + "<a href='customer'>Customer List</a>"
-                    + "</td></tr>");
+                + "<a href='customer'>Customer List</a>"
+                + "</td></tr>");
             writer.println("</table>");
             writer.println("</form></body>");
         } else {
@@ -108,7 +108,7 @@ public class CustomerServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response)
-            throws IOException {
+        throws IOException {
         String uri = request.getRequestURI();
         if (uri.endsWith("/customer")) {
             sendCustomerList(response);
@@ -120,12 +120,12 @@ public class CustomerServlet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request,
                        HttpServletResponse response)
-            throws IOException {
+        throws IOException {
         // update customer
         int customerId = 0;
         try {
             customerId =
-                    Integer.parseInt(request.getParameter("id"));
+                Integer.parseInt(request.getParameter("id"));
         } catch (NumberFormatException ignored) {
         }
         Customer customer = getCustomer(customerId);

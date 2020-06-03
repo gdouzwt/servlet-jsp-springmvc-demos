@@ -15,7 +15,7 @@ import java.io.UnsupportedEncodingException;
 public class SaveProductController implements Controller {
 
     private static final Log logger = LogFactory
-            .getLog(SaveProductController.class);
+        .getLog(SaveProductController.class);
 
     @Override
     public ModelAndView handleRequest(HttpServletRequest request,
@@ -41,7 +41,7 @@ public class SaveProductController implements Controller {
         // insert code to save Product
 
         return new ModelAndView("/app17a/jsp/ProductDetails.jsp", "product",
-                product);
+            product);
     }
 
 }

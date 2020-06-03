@@ -45,7 +45,7 @@ public class ProductController {
                 fileNames.add(fileName);
 
                 File imageFile = new File(servletRequest.getServletContext()
-                        .getRealPath("/img"), fileName);
+                    .getRealPath("/img"), fileName);
                 try {
                     multipartFile.transferTo(imageFile);
                 } catch (IOException e) {

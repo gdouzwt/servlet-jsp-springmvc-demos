@@ -24,10 +24,10 @@ public class DataFormatterTag extends SimpleTagSupport {
         JspWriter out = jspContext.getOut();
 
         out.print("<table style='border:1px solid green'>\n"
-                + "<tr><td><span style='font-weight:bold'>"
-                + header + "</span></td></tr>\n");
+            + "<tr><td><span style='font-weight:bold'>"
+            + header + "</span></td></tr>\n");
         StringTokenizer tokenizer = new StringTokenizer(items,
-                ",");
+            ",");
         while (tokenizer.hasMoreTokens()) {
             String token = tokenizer.nextToken();
             out.print("<tr><td>" + token + "</td></tr>\n");

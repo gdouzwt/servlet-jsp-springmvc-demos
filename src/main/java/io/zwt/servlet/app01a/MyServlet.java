@@ -1,6 +1,9 @@
 package io.zwt.servlet.app01a;
 
-import javax.servlet.*;
+import javax.servlet.Servlet;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -33,8 +36,8 @@ public class MyServlet implements Servlet {
         servletResponse.setCharacterEncoding("UTF-8");
         PrintWriter writer = servletResponse.getWriter();
         writer.print("<html><head></head>" +
-                "<body>Hello from " + servletName +
-                "</body></html>");
+            "<body>Hello from " + servletName +
+            "</body></html>");
     }
 
     @Override

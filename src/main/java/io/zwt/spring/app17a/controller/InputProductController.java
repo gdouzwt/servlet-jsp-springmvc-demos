@@ -12,7 +12,7 @@ import java.io.UnsupportedEncodingException;
 public class InputProductController implements Controller {
 
     private static final Log logger = LogFactory
-            .getLog(InputProductController.class);
+        .getLog(InputProductController.class);
 
     @Override
     public ModelAndView handleRequest(HttpServletRequest request,

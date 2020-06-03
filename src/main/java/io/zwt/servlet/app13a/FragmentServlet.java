@@ -11,7 +11,7 @@ public class FragmentServlet extends HttpServlet {
     private static final long serialVersionUID = 940L;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws IOException {
+        throws IOException {
 
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();

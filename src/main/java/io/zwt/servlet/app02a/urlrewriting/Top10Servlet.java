@@ -46,11 +46,11 @@ public class Top10Servlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response) throws
-            IOException {
+        IOException {
 
         String city = request.getParameter("city");
         if (city != null &&
-                (city.equals("london") || city.equals("paris"))) {
+            (city.equals("london") || city.equals("paris"))) {
             // show attractions
             showAttractions(request, response, city);
         } else {
@@ -61,21 +61,21 @@ public class Top10Servlet extends HttpServlet {
 
     private void showMainPage(HttpServletRequest request,
                               HttpServletResponse response) throws
-            IOException {
+        IOException {
         response.setContentType("text/html");
         PrintWriter writer = response.getWriter();
         writer.print("<html><head>" +
-                "<title>Top 10 Tourist Attractions</title>" +
-                "</head><body>" +
-                "Please select a city:" +
-                "<br/><a href='?city=london'>London</a>" +
-                "<br/><a href='?city=paris'>Paris</a>" +
-                "</body></html>");
+            "<title>Top 10 Tourist Attractions</title>" +
+            "</head><body>" +
+            "Please select a city:" +
+            "<br/><a href='?city=london'>London</a>" +
+            "<br/><a href='?city=paris'>Paris</a>" +
+            "</body></html>");
     }
 
     private void showAttractions(HttpServletRequest request,
                                  HttpServletResponse response, String city)
-            throws IOException {
+        throws IOException {
 
         int page = 1;
         String pageParameter = request.getParameter("page");
@@ -98,8 +98,8 @@ public class Top10Servlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter writer = response.getWriter();
         writer.println("<html><head>" +
-                "<title>Top 10 Tourist Attractions</title>" +
-                "</head><body>");
+            "<title>Top 10 Tourist Attractions</title>" +
+            "</head><body>");
         writer.println("<a href='top10'>Select City</a> ");
         writer.println("<hr/>Page " + page + "<hr/>");
 
@@ -108,10 +108,10 @@ public class Top10Servlet extends HttpServlet {
             writer.println(attractions.get(i) + "<br/>");
         }
         writer.print("<hr style='color:blue'/>" +
-                "<a href='?city=" + city +
-                "&page=1'>Page 1</a>");
+            "<a href='?city=" + city +
+            "&page=1'>Page 1</a>");
         writer.println("&nbsp; <a href='?city=" + city +
-                "&page=2'>Page 2</a>");
+            "&page=2'>Page 2</a>");
         writer.println("</body></html>");
     }
 }

@@ -18,7 +18,7 @@ public class BigCitiesServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         Map<String, String> capitals =
-                new HashMap<>();
+            new HashMap<>();
         capitals.put("Indonesia", "Jakarta");
         capitals.put("Malaysia", "Kuala Lumpur");
         capitals.put("Thailand", "Bangkok");
@@ -26,18 +26,18 @@ public class BigCitiesServlet extends HttpServlet {
 
 
         Map<String, String[]> bigCities =
-                new HashMap<>();
+            new HashMap<>();
         bigCities.put("Australia", new String[]{"Sydney",
-                "Melbourne", "Perth"});
+            "Melbourne", "Perth"});
         bigCities.put("New Zealand", new String[]{"Auckland",
-                "Christchurch", "Wellington"});
+            "Christchurch", "Wellington"});
         bigCities.put("Indonesia", new String[]{"Jakarta",
-                "Surabaya", "Medan"});
+            "Surabaya", "Medan"});
 
         request.setAttribute("capitals", capitals);
         request.setAttribute("bigCities", bigCities);
         RequestDispatcher rd =
-                request.getRequestDispatcher("/app05a/bigCities.jsp");
+            request.getRequestDispatcher("/app05a/bigCities.jsp");
         rd.forward(request, response);
     }
 }

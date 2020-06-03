@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "AsyncListenerServlet",
-        urlPatterns = {"/asyncListener"},
-        asyncSupported = true)
+    urlPatterns = {"/asyncListener"},
+    asyncSupported = true)
 public class AsyncListenerServlet extends HttpServlet {
     private static final long serialVersionUID = 62738L;
 

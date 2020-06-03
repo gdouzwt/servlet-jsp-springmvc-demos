@@ -1,4 +1,4 @@
-<%@ taglib uri="https://zwt.io/taglib/function" prefix="f"%>
+<%@ taglib uri="https://zwt.io/taglib/function" prefix="f" %>
 <html>
 <head>
     <title>Testing reverseString function</title>

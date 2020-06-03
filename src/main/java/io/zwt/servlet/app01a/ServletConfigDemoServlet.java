@@ -16,11 +16,11 @@ import java.io.PrintWriter;
  */
 
 @WebServlet(name = "ServletConfigDemoServlet",
-        urlPatterns = {"/servletConfigDemo"},
-        initParams = {
-                @WebInitParam(name = "admin", value = "Harry Taciak"),
-                @WebInitParam(name = "email", value = "admin@example.com")
-        }
+    urlPatterns = {"/servletConfigDemo"},
+    initParams = {
+        @WebInitParam(name = "admin", value = "Harry Taciak"),
+        @WebInitParam(name = "email", value = "admin@example.com")
+    }
 )
 public class ServletConfigDemoServlet implements Servlet {
     private transient ServletConfig servletConfig;
@@ -38,16 +38,16 @@ public class ServletConfigDemoServlet implements Servlet {
     @Override
     public void service(ServletRequest request,
                         ServletResponse response)
-            throws IOException {
+        throws IOException {
         ServletConfig servletConfig = getServletConfig();
         String admin = servletConfig.getInitParameter("admin");
         String email = servletConfig.getInitParameter("email");
         response.setContentType("text/html");
         PrintWriter writer = response.getWriter();
         writer.print("<html><head></head><body>" +
-                "Admin:" + admin +
-                "<br/>Email:" + email +
-                "</body></html>");
+            "Admin:" + admin +
+            "<br/>Email:" + email +
+            "</body></html>");
     }
 
     @Override

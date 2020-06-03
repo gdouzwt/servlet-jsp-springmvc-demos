@@ -47,7 +47,7 @@ public class EmployeeController {
             System.out.println("has errors");
             FieldError fieldError = bindingResult.getFieldError();
             System.out.println("Code:" + fieldError.getCode()
-                    + ", field:" + fieldError.getField());
+                + ", field:" + fieldError.getField());
 
             return "EmployeeForm";
         }

@@ -30,7 +30,7 @@ public class ProductController {
         product.setDescription(productForm.getDescription());
         try {
             product.setPrice(Float.parseFloat(
-                    productForm.getPrice()));
+                productForm.getPrice()));
         } catch (NumberFormatException ignored) {
         }
 

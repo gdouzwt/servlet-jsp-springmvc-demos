@@ -19,23 +19,23 @@ public class BooksServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response) throws ServletException,
-            IOException {
+        IOException {
 
         List<Book> books = new ArrayList<Book>();
         Book book1 = new Book("978-0980839616",
-                "Java 7: A Beginner's Tutorial", 45.00);
+            "Java 7: A Beginner's Tutorial", 45.00);
         Book book2 = new Book("978-0980331608",
-                "Struts 2 Design and Programming: A Tutorial",
-                49.95);
+            "Struts 2 Design and Programming: A Tutorial",
+            49.95);
         Book book3 = new Book("978-0975212820",
-                "Dimensional Data Warehousing with MySQL: A "
-                        + "Tutorial", 39.95);
+            "Dimensional Data Warehousing with MySQL: A "
+                + "Tutorial", 39.95);
         books.add(book1);
         books.add(book2);
         books.add(book3);
         request.setAttribute("books", books);
         RequestDispatcher rd =
-                request.getRequestDispatcher("/app05a/books.jsp");
+            request.getRequestDispatcher("/app05a/books.jsp");
         rd.forward(request, response);
     }
 }

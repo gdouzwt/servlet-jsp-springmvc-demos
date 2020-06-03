@@ -11,7 +11,7 @@ import java.util.Calendar;
 public class Main {
     public static void main(String[] args) {
         ApplicationContext context =
-                new ClassPathXmlApplicationContext(new String[]{"spring-config.xml"});
+            new ClassPathXmlApplicationContext(new String[]{"spring-config.xml"});
         Product product1 = context.getBean("product", Product.class);
 
         product1.setName("Excellent snake oil");
@@ -22,7 +22,7 @@ public class Main {
 
         Product featuredProduct = context.getBean("featuredProduct", Product.class);
         System.out.println(featuredProduct.getName() + ", " + featuredProduct.getDescription()
-                + ", " + featuredProduct.getPrice());
+            + ", " + featuredProduct.getPrice());
 
         Calendar calendar = context.getBean("calendar", Calendar.class);
         System.out.println(calendar.getTime());

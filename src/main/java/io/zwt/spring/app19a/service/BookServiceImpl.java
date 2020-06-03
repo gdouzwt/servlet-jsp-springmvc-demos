@@ -27,11 +27,11 @@ public class BookServiceImpl implements BookService {
 
         books = new ArrayList<Book>();
         books.add(new Book(1L, "9780980839623",
-                "Servlet & JSP: A Tutorial",
-                category1, "Budi Kurniawan"));
+            "Servlet & JSP: A Tutorial",
+            category1, "Budi Kurniawan"));
         books.add(new Book(2L, "9780980839630",
-                "C#: A Beginner's Tutorial",
-                category1, "Jayden Ky"));
+            "C#: A Beginner's Tutorial",
+            category1, "Jayden Ky"));
     }
 
     @Override

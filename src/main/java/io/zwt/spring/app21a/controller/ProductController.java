@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ProductController {
 
     private static final Log logger = LogFactory
-            .getLog(ProductController.class);
+        .getLog(ProductController.class);
 
     @RequestMapping(value = "/product_input")
     public String inputProduct(Model model) {
@@ -34,7 +34,7 @@ public class ProductController {
         if (bindingResult.hasErrors()) {
             FieldError fieldError = bindingResult.getFieldError();
             logger.info("Code:" + fieldError.getCode() + ", field:"
-                    + fieldError.getField());
+                + fieldError.getField());
 
             return "ProductForm";
         }

@@ -17,10 +17,10 @@ public class WelcomeServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response)
-            throws IOException {
+        throws IOException {
         response.setContentType("text/html");
         PrintWriter writer = response.getWriter();
         writer.print("<html><head></head>"
-                + "<body>Welcome</body></html>");
+            + "<body>Welcome</body></html>");
     }
 }

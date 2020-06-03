@@ -11,13 +11,13 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @WebListener
 public class SessionListener implements HttpSessionListener,
-        ServletContextListener {
+    ServletContextListener {
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         ServletContext servletContext = sce.getServletContext();
         servletContext.setAttribute("userCounter",
-                new AtomicInteger());
+            new AtomicInteger());
     }
 
     @Override
@@ -29,10 +29,10 @@ public class SessionListener implements HttpSessionListener,
         HttpSession session = se.getSession();
         ServletContext servletContext = session.getServletContext();
         AtomicInteger userCounter = (AtomicInteger) servletContext
-                .getAttribute("userCounter");
+            .getAttribute("userCounter");
         int userCount = userCounter.incrementAndGet();
         System.out.println("userCount incremented to :" +
-                userCount);
+            userCount);
     }
 
     @Override
@@ -40,9 +40,9 @@ public class SessionListener implements HttpSessionListener,
         HttpSession session = se.getSession();
         ServletContext servletContext = session.getServletContext();
         AtomicInteger userCounter = (AtomicInteger) servletContext
-                .getAttribute("userCounter");
+            .getAttribute("userCounter");
         int userCount = userCounter.decrementAndGet();
         System.out.println("---------- userCount decremented to :"
-                + userCount);
+            + userCount);
     }
 }

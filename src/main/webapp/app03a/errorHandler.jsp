@@ -1,9 +1,9 @@
-<%@page isErrorPage="true"%>
+<%@page isErrorPage="true" %>
 <html>
 <head><title>Error</title></head>
 <body>
 An error has occurred. <br/>
-Error message: 
+Error message:
 <%
     out.println(exception.toString());
 %>

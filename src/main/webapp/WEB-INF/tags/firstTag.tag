@@ -1,7 +1,7 @@
-<%@ tag import="java.util.Date" import="java.text.DateFormat"%>
+<%@ tag import="java.text.DateFormat" import="java.util.Date" %>
 <%
-    DateFormat dateFormat = 
-            DateFormat.getDateInstance(DateFormat.LONG);
+    DateFormat dateFormat =
+        DateFormat.getDateInstance(DateFormat.LONG);
     Date now = new Date(System.currentTimeMillis());
     out.println(dateFormat.format(now));
 %>

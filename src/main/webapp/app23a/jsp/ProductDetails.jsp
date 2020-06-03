@@ -2,26 +2,26 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Save Product</title>
-<style type="text/css">@import url("<c:url value="/css/main.css"/>");</style>
+    <title>Save Product</title>
+    <style type="text/css">@import url("<c:url value="/css/main.css"/>");</style>
 </head>
 <body>
 <div id="global">
     <h4>The product has been saved.</h4>
     <p>
-        <h5>Details:</h5>
-        Product Name: ${product.name}<br/>
-        Description: ${product.description}<br/>
-        Price: $${product.price}
-        <p>Following files are uploaded successfully.</p>
-        <ol>
+    <h5>Details:</h5>
+    Product Name: ${product.name}<br/>
+    Description: ${product.description}<br/>
+    Price: $${product.price}
+    <p>Following files are uploaded successfully.</p>
+    <ol>
         <c:forEach items="${product.images}" var="image">
             <li>${image.originalFilename}
-            <img width="100" src="<c:url value="/img/"/>
+                <img width="100" src="<c:url value="/img/"/>
             ${image.originalFilename}"/>
             </li>
         </c:forEach>
-        </ol>
+    </ol>
     </p>
 </div>
 </body>
