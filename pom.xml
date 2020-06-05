@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <!-- servlet & jsp -->
         <module>servletjsp/app01a</module>
         <module>servletjsp/app01b</module>
         <module>servletjsp/app01c</module>
@@ -35,6 +36,23 @@
         <module>servletjsp/app14b</module>
         <module>servletjsp/initializer</module>
         <module>servletjsp/webfragment</module>
+        <!-- springmvc -->
+        <module>springmvc/app15a</module>
+        <module>springmvc/app16a</module>
+        <module>springmvc/app16b</module>
+        <module>springmvc/app16c</module>
+        <module>springmvc/app17a</module>
+        <module>springmvc/app17b</module>
+        <module>springmvc/app18a</module>
+        <module>springmvc/app18b</module>
+        <module>springmvc/app19a</module>
+        <module>springmvc/app20a</module>
+        <module>springmvc/app20b</module>
+        <module>springmvc/app21a</module>
+        <module>springmvc/app22a</module>
+        <module>springmvc/app23a</module>
+        <module>springmvc/app23b</module>
+        <module>springmvc/app24a</module>
     </modules>
 
     <properties>
@@ -108,13 +126,6 @@
                 <groupId>commons-fileupload</groupId>
                 <artifactId>commons-fileupload</artifactId>
                 <version>1.3.3</version>
-            </dependency>
-
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.11</version>
-                <scope>test</scope>
             </dependency>
 
         </dependencies>
