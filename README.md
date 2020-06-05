@@ -1,17 +1,19 @@
-## Servlet、JSP和Spring MVC初学指南
+# Servlet、JSP和Spring MVC初学指南
 
-过了一遍代码，打算将代码改造成为采用最新版Spring Boot的实现。  
+过了一遍代码，打算将代码改造成为采用最新版Spring Boot的实现。因为Spring Boot默认自带内嵌式Tomcat，这样省去安装和配置Tomcat的步骤，上手更快。工程使用Maven多模块的方式管理，每个子模块对应原来书的代码的一个按章节区分的工程代码。顶层工程名为：servlet-jsp-springmvc-demos，避免与原来作者的示例代码目录相同，容易搞混淆。
 
 ![书籍封面](http://piggylearnnet.com/upload/image/20190326/1553601038840013400.png)
 
 本书是Servlet、JSP 和Spring MVC 的入门教程，是畅销图书《Spring MVC 学习指南》的姊妹篇。  
-Servlet 和JSP 是Java Web 应用开发的底层技术，而Spring MVC 是Spring 框架中用于解决Servlet 和JSP 应用开发的常见和通用问题的一个模块。Spring MVC 是一个广泛应用于GUI 开发的设计模式，是目前业界主流的Web 开发框架，也是一种热门的开发技能。  
-本书分两大部分，详细介绍了Servlet 和JSP 的核心技术，以及Spring MVC 的实践应用。对于期望学习如何应用Servlet、JSP 以及Spring MVC 来开发Java Web 应用的初学者来说，本书是一本非常理想的初学指南。  
-内容简介:  
+Servlet 和JSP 是Java Web 应用开发的底层技术，而Spring MVC 是Spring 框架中用于解决Servlet 和JSP 应用开发的常见和通用问题的一个模块。Spring MVC 是一个广泛应用于GUI 开发的设计模式，是目前业界主流的Web 开发框架，也是一种热门的开发技能。本书分两大部分，详细介绍了Servlet 和JSP 的核心技术，以及Spring MVC 的实践应用。对于期望学习如何应用Servlet、JSP 以及Spring MVC 来开发Java Web 应用的初学者来说，本书是一本非常理想的初学指南。  
+
+**内容简介:**  
 Servlet和JSP是开发Java Web应用程序的两种基本技术。Spring MVC是Spring框架中用于Web应用快速开发的一个模块，是当今流行的Web开发框架之一。本书是Servlet、JSP和Spring MVC的学习指南。全书内容分为两个部分，首部分主要介绍Servlet和JSP基础知识和技术，包括第1章至第15章；第2部分主要介绍Spring MVC，包括第16章至第24章。附录部分给出了Tomcat安装和配置指导，还介绍了Servlet and JSP注解以及SSL证书。本书内容充实、讲解清晰，非常适合Web开发者尤其是基于Java的Web应用开发者阅读。  
 
-目录:  
-### 第一部分　Servlets和SP  
+## 目录
+
+### 第一部分　Servlets和JSP  
+
 第1章　Servlets　3  
 1．1　Servlet API概览　3  
 1．2　Servlet　4  
@@ -220,6 +222,7 @@ Servlet和JSP是开发Java Web应用程序的两种基本技术。Spring MVC是S
 13．4　小结　214  
   
 ### 第二部分　Spring mvc  
+
 第14章　动态加载及Servlet容器加载器　217  
 14．1　动态加载　217  
 14．2　Servlet容器加载器　220  
@@ -372,4 +375,4 @@ C．2．1　生成密钥对　373
 C．2．2　获得认证　374  
 C．2．3　将证书导入到密钥库　375  
 C．2．4　从密钥库导出证书　375  
-C．2．5　列出密钥库条目　375  
+C．2．5　列出密钥库条目　375
