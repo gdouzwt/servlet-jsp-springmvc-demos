@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(urlPatterns = {"/books"})
+@WebServlet(name = "books", urlPatterns = {"/books"})
 public class BooksServlet extends HttpServlet {
     private static final int serialVersionUID = -234237;
 
