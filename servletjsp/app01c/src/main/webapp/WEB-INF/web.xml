@@ -4,6 +4,7 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
+    <!-- 使用部署描述符的一个好处是，如果需要修改配置值，如 Servlet 路径，则不需要对它们进行编译 -->
     <servlet>
         <servlet-name>SimpleServlet</servlet-name>
         <servlet-class>io.zwt.SimpleServlet</servlet-class>
