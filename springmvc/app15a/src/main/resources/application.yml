@@ -1,0 +1,9 @@
+spring:
+    jpa.hibernate.ddl-auto: update
+    datasource:
+        url: jdbc:mysql://host.docker.internal:3306/library?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
+        username: root
+        password: se1124
+server:
+    servlet:
+        context-path: /app15a

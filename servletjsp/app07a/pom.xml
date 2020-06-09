@@ -14,11 +14,20 @@
     <artifactId>app07a</artifactId>
 
     <dependencies>
+
+        <!--jsp-api版本按照Tomcat 9.0.35内置版本，不追求新版-->
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>javax.servlet.jsp-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <scope>provided</scope>
         </dependency>
+
     </dependencies>
 
     <build>
