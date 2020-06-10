@@ -33,8 +33,7 @@ public class EmployeeServlet extends HttpServlet {
         employee.setAddress(address);
         request.setAttribute("employee", employee);
 
-        Map<String, String> capitals = new HashMap<String,
-            String>();
+        Map<String, String> capitals = new HashMap<>();
         capitals.put("China", "Beijing");
         capitals.put("Austria", "Vienna");
         capitals.put("Australia", "Canberra");

@@ -18,15 +18,15 @@ public class BigCitiesServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         Map<String, String> capitals =
-            new HashMap<String, String>();
+            new HashMap<>();
         capitals.put("Indonesia", "Jakarta");
         capitals.put("Malaysia", "Kuala Lumpur");
         capitals.put("Thailand", "Bangkok");
         request.setAttribute("capitals", capitals);
 
 
-        Map<String, String[]> bigCities =
-            new HashMap<String, String[]>();
+        Map<String, String[]> bigCities;
+        bigCities = new HashMap<>();
         bigCities.put("Australia", new String[]{"Sydney",
             "Melbourne", "Perth"});
         bigCities.put("New Zealand", new String[]{"Auckland",

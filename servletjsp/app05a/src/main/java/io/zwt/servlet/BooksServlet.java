@@ -21,7 +21,7 @@ public class BooksServlet extends HttpServlet {
                       HttpServletResponse response) throws ServletException,
         IOException {
 
-        List<Book> books = new ArrayList<Book>();
+        List<Book> books = new ArrayList<>();
         Book book1 = new Book("978-0980839616",
             "Java 7: A Beginner's Tutorial", 45.00);
         Book book2 = new Book("978-0980331608",

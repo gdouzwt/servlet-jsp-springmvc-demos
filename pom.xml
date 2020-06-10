@@ -4,6 +4,7 @@
 
   <modelVersion>4.0.0</modelVersion>
 
+  <!--Spring Boot 2.3.0-->
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
@@ -64,6 +65,7 @@
     <module>springmvc/app24a</module>
   </modules>
 
+  <!--使用 Java 11-->
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>11</maven.compiler.source>
@@ -91,12 +93,12 @@
       </dependency>
 
       <!--Tomcat 9.0.35里边没有，所以scope是runtime-->
-      <!--      <dependency>
+      <!--<dependency>
               <groupId>jakarta.servlet.jsp.jstl</groupId>
               <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
               <version>1.2.7</version>
               <scope>runtime</scope>
-            </dependency>-->
+      </dependency>-->
 
       <dependency>
         <groupId>javax.servlet.jsp.jstl</groupId>
@@ -104,6 +106,7 @@
         <version>1.2.1</version>
         <scope>runtime</scope>
       </dependency>
+
       <!--Tomcat 9.0.35里边没有，所以scope是runtime-->
       <dependency>
         <groupId>org.apache.taglibs</groupId>
@@ -127,8 +130,7 @@
         <version>6.1.2.Final</version>
       </dependency>
 
-      <!--以下关于Spring的版本，逐步替换吧-->
-      <!-- 使用 Spring Boot
+      <!--以下关于Spring的版本，逐步使用 Spring Boot 替换吧
       <dependency>
           <groupId>org.springframework</groupId>
           <artifactId>spring-core</artifactId>
@@ -145,8 +147,7 @@
           <groupId>org.springframework</groupId>
           <artifactId>spring-webmvc</artifactId>
           <version>4.3.27.RELEASE</version>
-      </dependency>
-      -->
+      </dependency>-->
 
       <!--最新版是1.4，2018年，但稳妥起见，先用着1.3.3-->
       <dependency>
@@ -167,17 +168,17 @@
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
-          <!--                    <configuration>-->
-          <!--                        <filesets>-->
-          <!--                            <fileset>-->
-          <!--                                <directory>src/main/webapp/WEB-INF/lib</directory>-->
-          <!--                                <includes>-->
-          <!--                                    <include>**/*</include>-->
-          <!--                                </includes>-->
-          <!--                                <followSymlinks>false</followSymlinks>-->
-          <!--                            </fileset>-->
-          <!--                        </filesets>-->
-          <!--                    </configuration>-->
+          <!--<configuration>
+            <filesets>
+              <fileset>
+                <directory>src/main/webapp/WEB-INF/lib</directory>
+                <includes>
+                  <include>**/*</include>
+                </includes>
+                <followSymlinks>false</followSymlinks>
+              </fileset>
+            </filesets>
+          </configuration>-->
         </plugin>
 
         <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
@@ -202,9 +203,9 @@
         <plugin>
           <artifactId>maven-war-plugin</artifactId>
           <version>3.2.3</version>
-          <!--<configuration>-->
-          <!--<packagingExcludes>**/file/empty.tmp</packagingExcludes>-->
-          <!--</configuration>-->
+          <!--<configuration>
+            <packagingExcludes>**/file/empty.tmp</packagingExcludes>
+          </configuration>-->
         </plugin>
 
         <plugin>
