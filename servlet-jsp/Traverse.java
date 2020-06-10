@@ -33,7 +33,8 @@ public class Traverse {
     }
 
     private static void changeContent(Path path) {
-        String newName = path.getParent().getFileName().toString();
+        // String newName = path.getParent().getFileName().toString();
+        String newName = "servlet-jsp";
         DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
         try {
             DocumentBuilder builder = builderFactory.newDocumentBuilder();
@@ -41,23 +42,28 @@ public class Traverse {
             XPathFactory xPathFactory = XPathFactory.newInstance();
             XPath xPath = xPathFactory.newXPath();
             XPathExpression expression;
-            expression = xPath.compile("/project/artifactId/text() | //finalName/text()");
+            expression = xPath.compile("/project/parent/artifactId/text() | /project/parent/relativePath");
             Object result = expression.evaluate(document, XPathConstants.NODESET);
             NodeList nodeList = (NodeList) result;
-            for (int i = 0; i < nodeList.getLength(); i++) {
-                System.out.println(nodeList.item(i).getNodeValue());
-                System.out.println("ä¸Šé¢æ˜¯åŽŸæ¥çš„----------");
-                System.out.println("æƒ³æ”¹æˆï¼š " + newName);
-                nodeList.item(i).setNodeValue(newName);
-                System.out.println();
-                System.out.println("åˆ†å‰²çº¿-------------");
-            }
+            System.out.println("µ±Ç°Ä¿Â¼£º " + path.getParent().getFileName());
+            System.out.println("artifactId: " + nodeList.item(0).getNodeValue());
+            System.out.println("relativePath: " + nodeList.item(1).getTextContent());
+            // for (int i = 0; i < nodeList.getLength(); i++) {
+            //     System.out.println(nodeList.item(i).getNodeValue());
+            //     System.out.println("ÉÏÃæÊÇÔ­À´µÄ----------");
+            //     System.out.println("Ïë¸Ä³É£º " + newName);
+            //     nodeList.item(i).setNodeValue(newName);
+            //     System.out.println();
+                System.out.println("·Ö¸îÏß------------------------------------------------------------------------");
+            // }
 
-            // åŠ äº† Transformer.transform ä¿®æ”¹å°±æœ‰æ•ˆäº†ã€‚
-            TransformerFactory transformerFactory = TransformerFactory.newInstance();
-            Transformer transformer = transformerFactory.newTransformer();
-            transformer.transform(new DOMSource(document), new StreamResult(path.toFile()));
-        } catch (ParserConfigurationException | SAXException | IOException | XPathExpressionException | TransformerException e) {
+
+            // ¼ÓÁË Transformer.transform ÐÞ¸Ä¾ÍÓÐÐ§ÁË¡£
+            // TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            // Transformer transformer = transformerFactory.newTransformer();
+            // transformer.transform(new DOMSource(document), new StreamResult(path.toFile()));
+        // } catch (ParserConfigurationException | SAXException | IOException | XPathExpressionException | TransformerException e) {
+        } catch (ParserConfigurationException | SAXException | IOException | XPathExpressionException e) {
             e.printStackTrace();
         }
     }
