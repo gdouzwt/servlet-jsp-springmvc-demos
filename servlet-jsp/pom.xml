@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>servlet-jsp-springmvc-demos</artifactId>
+    <groupId>io.zwt</groupId>
+    <version>1.0-SNAPSHOT</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+
+  <groupId>io.zwt</groupId>
+  <artifactId>servlet-jsp</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>servlet-jsp</name>
+  <packaging>pom</packaging>
+
+  <modules>
+    <!-- servlet & jsp -->
+    <module>app01a</module>
+    <module>app01b</module>
+    <module>app01c</module>
+    <module>app02a</module>
+    <module>app03a</module>
+    <module>app04a</module>
+    <module>app05a</module>
+    <module>app06a</module>
+    <module>app06b</module>
+    <module>app06c</module>
+    <module>app07a</module>
+    <module>app08a</module>
+    <module>app09a</module>
+    <module>app10a</module>
+    <module>app11a</module>
+    <module>app12a</module>
+    <module>app12b</module>
+    <module>app12c</module>
+    <module>app12d</module>
+    <module>app12e</module>
+    <module>app13a</module>
+    <module>app14a</module>
+    <module>app14b</module>
+    <module>initializer</module>
+    <module>webfragment</module>
+  </modules>
+
+  <dependencyManagement>
+    <dependencies>
+    </dependencies>
+  </dependencyManagement>
+
+</project>

@@ -21,48 +21,10 @@
 
   <modules>
     <!-- servlet & jsp -->
-    <module>servletjsp/app01a</module>
-    <module>servletjsp/app01b</module>
-    <module>servletjsp/app01c</module>
-    <module>servletjsp/app02a</module>
-    <module>servletjsp/app03a</module>
-    <module>servletjsp/app04a</module>
-    <module>servletjsp/app05a</module>
-    <module>servletjsp/app06a</module>
-    <module>servletjsp/app06b</module>
-    <module>servletjsp/app06c</module>
-    <module>servletjsp/app07a</module>
-    <module>servletjsp/app08a</module>
-    <module>servletjsp/app09a</module>
-    <module>servletjsp/app10a</module>
-    <module>servletjsp/app11a</module>
-    <module>servletjsp/app12a</module>
-    <module>servletjsp/app12b</module>
-    <module>servletjsp/app12c</module>
-    <module>servletjsp/app12d</module>
-    <module>servletjsp/app12e</module>
-    <module>servletjsp/app13a</module>
-    <module>servletjsp/app14a</module>
-    <module>servletjsp/app14b</module>
-    <module>servletjsp/initializer</module>
-    <module>servletjsp/webfragment</module>
+    <module>servlet-jsp</module>
     <!-- springmvc -->
-    <module>springmvc/app15a</module>
-    <module>springmvc/app16a</module>
-    <module>springmvc/app16b</module>
-    <module>springmvc/app16c</module>
-    <module>springmvc/app17a</module>
-    <module>springmvc/app17b</module>
-    <module>springmvc/app18a</module>
-    <module>springmvc/app18b</module>
-    <module>springmvc/app19a</module>
-    <module>springmvc/app20a</module>
-    <module>springmvc/app20b</module>
-    <module>springmvc/app21a</module>
-    <module>springmvc/app22a</module>
-    <module>springmvc/app23a</module>
-    <module>springmvc/app23b</module>
-    <module>springmvc/app24a</module>
+    <module>springmvc</module>
+
   </modules>
 
   <!--使用 Java 11-->

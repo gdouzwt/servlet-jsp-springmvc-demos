@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <!--Spring Boot 2.3.0-->
+  <parent>
+    <groupId>io.zwt</groupId>
+    <artifactId>servlet-jsp-springmvc-demos</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+
+  <groupId>io.zwt</groupId>
+  <artifactId>springmvc</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>springmvc</name>
+  <packaging>pom</packaging>
+
+  <modules>
+    <!-- springmvc -->
+    <module>app15a</module>
+    <module>app16a</module>
+    <module>app16b</module>
+    <module>app16c</module>
+    <module>app17a</module>
+    <module>app17b</module>
+    <module>app18a</module>
+    <module>app18b</module>
+    <module>app19a</module>
+    <module>app20a</module>
+    <module>app20b</module>
+    <module>app21a</module>
+    <module>app22a</module>
+    <module>app23a</module>
+    <module>app23b</module>
+    <module>app24a</module>
+  </modules>
+
+  <dependencyManagement>
+
+    <dependencies>
+    </dependencies>
+  </dependencyManagement>
+
+</project>
