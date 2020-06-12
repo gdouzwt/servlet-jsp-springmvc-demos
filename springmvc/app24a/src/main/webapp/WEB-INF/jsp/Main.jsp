@@ -2,8 +2,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Download Page</title>
-<style type="text/css">@import url("<c:url value="/css/main.css"/>");</style>
+    <title>Download Page</title>
+    <style type="text/css">@import url("<c:url value="/css/main.css"/>");</style>
 </head>
 <body>
 <div id="global">

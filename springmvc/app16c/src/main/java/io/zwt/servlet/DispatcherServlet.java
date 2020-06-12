@@ -1,4 +1,5 @@
 package io.zwt.servlet;
+
 import io.zwt.controller.InputProductController;
 import io.zwt.controller.SaveProductController;
 
@@ -15,21 +16,21 @@ public class DispatcherServlet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request,
-            HttpServletResponse response)
-            throws IOException, ServletException {
+                      HttpServletResponse response)
+        throws IOException, ServletException {
         process(request, response);
     }
 
     @Override
     public void doPost(HttpServletRequest request,
-            HttpServletResponse response)
-            throws IOException, ServletException {
+                       HttpServletResponse response)
+        throws IOException, ServletException {
         process(request, response);
     }
 
     private void process(HttpServletRequest request,
-            HttpServletResponse response)
-            throws IOException, ServletException {
+                         HttpServletResponse response)
+        throws IOException, ServletException {
 
         String uri = request.getRequestURI();
         /*
@@ -44,17 +45,17 @@ public class DispatcherServlet extends HttpServlet {
         String dispatchUrl = null;
 
         if (action.equals("product_input.action")) {
-        	InputProductController controller = new InputProductController();
-        	dispatchUrl = controller.handleRequest(request, response);
+            InputProductController controller = new InputProductController();
+            dispatchUrl = controller.handleRequest(request, response);
         } else if (action.equals("product_save.action")) {
-        	SaveProductController controller = new SaveProductController();
-        	dispatchUrl = controller.handleRequest(request, response);
+            SaveProductController controller = new SaveProductController();
+            dispatchUrl = controller.handleRequest(request, response);
         }
 
         // forward to a view
         if (dispatchUrl != null) {
             RequestDispatcher rd =
-                    request.getRequestDispatcher(dispatchUrl);
+                request.getRequestDispatcher(dispatchUrl);
             rd.forward(request, response);
         }
     }

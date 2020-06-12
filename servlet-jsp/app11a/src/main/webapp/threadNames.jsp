@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Asynchronous servlet</title>
+    <title>Asynchronous servlet</title>
 </head>
 <body>
 Main thread: ${mainThread}

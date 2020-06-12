@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Save Product</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">@import url(css/main.css);</style>
+</head>
+<body>
+<div id="global">
+    <h4>The product has been saved.</h4>
+    <p>
+    <h5>Details:</h5>
+    <p th:text="'Product Name: ' + ${product.name}"></p>
+    <p th:text="'Description: ' + ${product.description}"></p>
+    <p th:text="'Price: ' + ${product.price}"></p>
+</div>
+</body>
+</html>

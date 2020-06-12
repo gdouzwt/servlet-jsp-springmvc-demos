@@ -1,0 +1,6 @@
+server:
+    servlet:
+        context-path: /app16a
+logging:
+    level:
+        io.zwt.App16a: debug

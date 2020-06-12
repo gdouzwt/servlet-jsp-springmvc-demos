@@ -15,18 +15,18 @@ import java.io.*;
 @Controller
 public class ImageController {
 
-	private static final Log logger = LogFactory.getLog(ImageController.class);
+    private static final Log logger = LogFactory.getLog(ImageController.class);
 
-	@RequestMapping(value="/image_get/{id}", method = RequestMethod.GET)
-	public void getImage(@PathVariable String id,
-	        HttpServletRequest request,
-	        HttpServletResponse response,
-	        @RequestHeader String referer) {
+    @RequestMapping(value = "/image_get/{id}", method = RequestMethod.GET)
+    public void getImage(@PathVariable String id,
+                         HttpServletRequest request,
+                         HttpServletResponse response,
+                         @RequestHeader String referer) {
         if (referer != null) {
             String imageDirectory = request.getServletContext().
-                    getRealPath("/WEB-INF/image");
+                getRealPath("/WEB-INF/image");
             File file = new File(imageDirectory,
-                    id + ".jpg");
+                id + ".jpg");
             if (file.exists()) {
                 response.setContentType("image/jpg");
                 byte[] buffer = new byte[1024];
@@ -62,5 +62,5 @@ public class ImageController {
                 }
             }
         }
-	}
+    }
 }

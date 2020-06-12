@@ -8,13 +8,13 @@ import java.io.PrintWriter;
 
 public class FragmentServlet extends HttpServlet {
 
-	private static final long serialVersionUID = 940L;
+    private static final long serialVersionUID = 940L;
 
-	public void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+        throws IOException {
 
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
-		out.println("A plug-in");
-	}
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        out.println("A plug-in");
+    }
 }

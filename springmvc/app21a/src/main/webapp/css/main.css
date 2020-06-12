@@ -1,14 +1,14 @@
 #global {
-    text-align: left;
-    border: 1px solid #dedede;
-    background: #efefef;
-    width: 560px;
-    padding: 20px;
-    margin: 100px auto;
+  text-align: left;
+  border: 1px solid #dedede;
+  background: #efefef;
+  width: 560px;
+  padding: 20px;
+  margin: 100px auto;
 }
 
 form {
-  font:100% verdana;
+  font: 100% verdana;
   min-width: 500px;
   max-width: 600px;
   width: 560px;
@@ -21,27 +21,30 @@ form fieldset {
 }
 
 legend {
-    font-size: 1.3em;
+  font-size: 1.3em;
 }
 
-form label { 
-    width: 250px;
-    display: block;
-    float: left;
-    text-align: right;
-    padding: 2px;
+form label {
+  width: 250px;
+  display: block;
+  float: left;
+  text-align: right;
+  padding: 2px;
 }
 
 #buttons {
-    text-align: right;
+  text-align: right;
 }
+
 #errors, li {
-	color: red;
+  color: red;
 }
+
 .error {
-    color: red;
-    font-size: 9pt;	
+  color: red;
+  font-size: 9pt;
 }
+
 .errorLine {
-	text-align: center;
+  text-align: center;
 }

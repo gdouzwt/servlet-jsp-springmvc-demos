@@ -1,11 +1,11 @@
 package io.zwt.formatter;
 
+import org.springframework.format.Formatter;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-
-import org.springframework.format.Formatter;
 
 public class DateFormatter implements Formatter<Date> {
 
@@ -30,8 +30,8 @@ public class DateFormatter implements Formatter<Date> {
         } catch (ParseException e) {
             // the error message will be displayed when using <form:errors>
             throw new IllegalArgumentException(
-                    "invalid date format. Please use this pattern\""
-                            + datePattern + "\"");
+                "invalid date format. Please use this pattern\""
+                    + datePattern + "\"");
         }
     }
 }

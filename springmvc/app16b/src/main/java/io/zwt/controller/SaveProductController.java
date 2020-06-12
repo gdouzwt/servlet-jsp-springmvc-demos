@@ -26,7 +26,7 @@ public class SaveProductController implements Controller {
         try {
             product.setPrice(Float.parseFloat(
                 productForm.getPrice()));
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException ignored) {
         }
 
         // insert code to add product to the database

@@ -30,8 +30,8 @@ public class DateFormatter implements Formatter<Date> {
         } catch (ParseException e) {
             // the error message will be displayed when using <form:errors>
             throw new IllegalArgumentException(
-                    "invalid date format. Please use this pattern\""
-                            + datePattern + "\"");
+                "invalid date format. Please use this pattern\""
+                    + datePattern + "\"");
         }
     }
 }

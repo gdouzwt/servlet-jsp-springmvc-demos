@@ -1,12 +1,11 @@
 package io.zwt.service;
 
+import app18b.domain.Product;
+import org.springframework.stereotype.Service;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
-
-import org.springframework.stereotype.Service;
-
-import app18b.domain.Product;
 
 @Service
 public class ProductServiceImpl implements ProductService {

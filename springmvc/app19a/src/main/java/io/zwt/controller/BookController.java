@@ -1,7 +1,8 @@
 package io.zwt.controller;
 
-import java.util.List;
-
+import io.zwt.domain.Book;
+import io.zwt.domain.Category;
+import io.zwt.service.BookService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import io.zwt.domain.Book;
-import io.zwt.domain.Category;
-import io.zwt.service.BookService;
+import java.util.List;
 
 @Controller
 public class BookController {

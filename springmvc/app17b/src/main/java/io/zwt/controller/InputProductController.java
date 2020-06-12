@@ -10,13 +10,13 @@ import javax.servlet.http.HttpServletResponse;
 
 public class InputProductController implements Controller {
 
-	private static final Log logger = LogFactory.getLog(InputProductController.class);
+    private static final Log logger = LogFactory.getLog(InputProductController.class);
 
-	@Override
-	public ModelAndView handleRequest(HttpServletRequest request,
-			HttpServletResponse response) throws Exception {
-		logger.info("InputProductController called");
-		return new ModelAndView("ProductForm");
-	}
+    @Override
+    public ModelAndView handleRequest(HttpServletRequest request,
+                                      HttpServletResponse response) throws Exception {
+        logger.info("InputProductController called");
+        return new ModelAndView("ProductForm");
+    }
 
 }

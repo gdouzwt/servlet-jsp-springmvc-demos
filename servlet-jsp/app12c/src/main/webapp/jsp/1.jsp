@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Welcome</title>
+    <title>Welcome</title>
 </head>
 <body>
-Hellow
+Hello
 </body>
 </html>

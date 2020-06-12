@@ -16,7 +16,7 @@ import javax.validation.Valid;
 public class ProductController {
 
     private static final Log logger = LogFactory
-            .getLog(ProductController.class);
+        .getLog(ProductController.class);
 
     @RequestMapping(value = "/product_input")
     public String inputProduct(Model model) {
@@ -26,13 +26,13 @@ public class ProductController {
 
     @RequestMapping(value = "/product_save")
     public String saveProduct(@Valid @ModelAttribute Product product,
-            BindingResult bindingResult, Model model) {
+                              BindingResult bindingResult, Model model) {
 
         if (bindingResult.hasErrors()) {
             FieldError fieldError = bindingResult.getFieldError();
             logger.info("Code:" + fieldError.getCode() + ", object:"
-                    + fieldError.getObjectName() + ", field:"
-                    + fieldError.getField());
+                + fieldError.getObjectName() + ", field:"
+                + fieldError.getField());
             return "ProductForm";
         }
 
