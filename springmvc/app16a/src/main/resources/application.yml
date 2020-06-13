@@ -3,4 +3,7 @@ server:
         context-path: /app16a
 logging:
     level:
-        io.zwt.App16a: debug
+        io.zwt.App16a: off
+spring:
+    main:
+        banner-mode: off

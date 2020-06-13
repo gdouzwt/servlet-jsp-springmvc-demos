@@ -1,6 +1,6 @@
 package io.zwt.validator;
 
-import app23b.domain.Product;
+import io.zwt.domain.Product;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;

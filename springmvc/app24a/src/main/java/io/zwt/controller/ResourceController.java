@@ -1,6 +1,7 @@
 package io.zwt.controller;
 
 import io.zwt.domain.Login;
+import lombok.extern.log4j.Log4j2;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
@@ -13,8 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.*;
 
+@Log4j2
 @Controller
-
 public class ResourceController {
 
     private static final Log logger = LogFactory.getLog(ResourceController.class);
@@ -34,6 +35,7 @@ public class ResourceController {
     @RequestMapping(value = "/resource_download")
     public String downloadResource(HttpSession session, HttpServletRequest request,
                                    HttpServletResponse response) {
+
         if (session == null ||
             session.getAttribute("loggedIn") == null) {
             return "LoginForm";
@@ -46,12 +48,9 @@ public class ResourceController {
             response.addHeader("Content-Disposition",
                 "attachment; filename=secret.pdf");
             byte[] buffer = new byte[1024];
-            FileInputStream fis = null;
-            BufferedInputStream bis = null;
             // if using Java 7, use try-with-resources
-            try {
-                fis = new FileInputStream(file);
-                bis = new BufferedInputStream(fis);
+            try (FileInputStream fis = new FileInputStream(file);
+                 BufferedInputStream bis = new BufferedInputStream(fis)) {
                 OutputStream os = response.getOutputStream();
                 int i = bis.read(buffer);
                 while (i != -1) {
@@ -59,21 +58,9 @@ public class ResourceController {
                     i = bis.read(buffer);
                 }
             } catch (IOException ex) {
+                logger.debug(ex);
                 // do something,
                 // probably forward to an Error page
-            } finally {
-                if (bis != null) {
-                    try {
-                        bis.close();
-                    } catch (IOException e) {
-                    }
-                }
-                if (fis != null) {
-                    try {
-                        fis.close();
-                    } catch (IOException e) {
-                    }
-                }
             }
         }
         return null;

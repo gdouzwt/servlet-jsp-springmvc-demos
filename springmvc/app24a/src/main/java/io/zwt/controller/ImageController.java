@@ -30,12 +30,9 @@ public class ImageController {
             if (file.exists()) {
                 response.setContentType("image/jpg");
                 byte[] buffer = new byte[1024];
-                FileInputStream fis = null;
-                BufferedInputStream bis = null;
                 // if you're using Java 7, use try-with-resources
-                try {
-                    fis = new FileInputStream(file);
-                    bis = new BufferedInputStream(fis);
+                try (FileInputStream fis = new FileInputStream(file);
+                     BufferedInputStream bis = new BufferedInputStream(fis)) {
                     OutputStream os = response.getOutputStream();
                     int i = bis.read(buffer);
                     while (i != -1) {
@@ -44,21 +41,6 @@ public class ImageController {
                     }
                 } catch (IOException ex) {
                     // do something here
-                } finally {
-                    if (bis != null) {
-                        try {
-                            bis.close();
-                        } catch (IOException e) {
-
-                        }
-                    }
-                    if (fis != null) {
-                        try {
-                            fis.close();
-                        } catch (IOException e) {
-
-                        }
-                    }
                 }
             }
         }

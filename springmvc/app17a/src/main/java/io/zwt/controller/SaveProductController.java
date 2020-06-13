@@ -5,10 +5,10 @@ import io.zwt.form.ProductForm;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 @Controller
 public class SaveProductController {
@@ -16,10 +16,9 @@ public class SaveProductController {
     private static final Log logger = LogFactory
         .getLog(SaveProductController.class);
 
-
-    public ModelAndView saveProduct(HttpServletRequest request,
-                                    HttpServletResponse response) {
-        logger.info("SaveProductController called");
+    @PostMapping("/product_save.action")
+    public ModelAndView handleRequest(HttpServletRequest request) {
+        logger.debug("SaveProductController called");
         ProductForm productForm = new ProductForm();
         // populate action properties
         productForm.setName(request.getParameter("name"));
@@ -37,7 +36,7 @@ public class SaveProductController {
 
         // insert code to save Product
 
-        return new ModelAndView("public/jsp/ProductDetails.jsp", "product",
+        return new ModelAndView("/WEB-INF/jsp/ProductDetails.jsp", "product",
             product);
     }
 

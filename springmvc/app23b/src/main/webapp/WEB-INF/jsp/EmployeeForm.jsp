@@ -9,7 +9,7 @@
 <body>
 
 <div id="global">
-    <form:form commandName="employee" action="employee_save" method="post">
+    <form:form modelAttribute="employee" action="employee_save" method="post">
         <fieldset>
             <legend>Add an employee</legend>
             <p>

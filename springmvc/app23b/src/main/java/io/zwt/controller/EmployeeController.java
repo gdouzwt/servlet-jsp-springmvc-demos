@@ -1,6 +1,6 @@
 package io.zwt.controller;
 
-import app23b.domain.Employee;
+import io.zwt.domain.Employee;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;

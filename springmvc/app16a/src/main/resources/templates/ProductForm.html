@@ -1,37 +1,50 @@
 <!DOCTYPE HTML>
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
-    <title>Add Product Form</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <style type="text/css">@import url(css/main.css);</style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Add Product Form</title>
+    <!--<style type="text/css">@import url(css/main.css);</style>-->
 </head>
 <body>
-<div id="global">
-    <form action="#" th:action="@{/product_save.action}" th:object="${product}" method="post">
-        <fieldset>
-            <legend>Add a product</legend>
-            <p>
-                <label for="name">Product Name: </label>
-                <input type="text" id="name" name="name"
-                       tabindex="1" th:field="*{name}"/>
-            </p>
-            <p>
-                <label for="description">Description: </label>
-                <input type="text" id="description"
-                       name="description" tabindex="2" th:field="*{description}"/>
-            </p>
-            <p>
-                <label for="price">Price: </label>
-                <input type="text" id="price" name="price"
-                       tabindex="3" th:field="*{price}"/>
-            </p>
-            <p id="buttons">
-                <input id="reset" type="reset" tabindex="4">
-                <input id="submit" type="submit" tabindex="5"
-                       value="Add Product">
-            </p>
-        </fieldset>
-    </form>
+
+<div class="container">
+    <div class="row">
+        <div id="global" class="col-sm-10">
+            <form action="#" th:action="@{/product_save.action}" th:object="${product}" method="post">
+                <fieldset class="form-group">
+
+                    <legend>Add a product</legend>
+                    <div class="form-group row">
+                        <label for="name">Product Name: </label>
+                        <input type="text" id="name" name="name" tabindex="1" th:field="*{name}"/>
+                    </div>
+
+                    <div class="form-group ">
+                        <label for="description">Description: </label>
+                        <input type="text" id="description"
+                               name="description" tabindex="2" th:field="*{description}"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Price: </label>
+                        <input type="text" id="price" name="price"
+                               tabindex="3" th:field="*{price}"/>
+                    </div>
+
+                    <div id="buttons" class="form-group row">
+                        <button id="reset" type="reset" tabindex="4" class="btn btn-warning">重置</button>
+                        <button id="submit" type="submit" tabindex="5" class="btn btn-primary">添加产品</button>
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>

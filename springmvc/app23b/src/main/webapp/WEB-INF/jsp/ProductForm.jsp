@@ -9,7 +9,7 @@
 <body>
 
 <div id="global">
-    <form:form commandName="product" action="product_save" method="post" enctype="multipart/form-data">
+    <form:form modelAttribute="product" action="product_save" method="post" enctype="multipart/form-data">
         <fieldset>
             <legend>Add a product</legend>
             <p>
@@ -27,7 +27,7 @@
             </p>
             <p>
                 <label for="image">Product Image: </label>
-                <input type="file" name="images[0]"/>
+                <input id="image" type="file" name="images[0]"/>
             </p>
             <p id="buttons">
                 <input id="reset" type="reset" tabindex="4">

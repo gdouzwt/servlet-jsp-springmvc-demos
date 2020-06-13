@@ -1,6 +1,6 @@
 package io.zwt.controller;
 
-import app23b.domain.UploadedFile;
+import io.zwt.domain.UploadedFile;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;

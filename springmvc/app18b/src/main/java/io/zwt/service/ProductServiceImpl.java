@@ -1,6 +1,6 @@
 package io.zwt.service;
 
-import app18b.domain.Product;
+import io.zwt.domain.Product;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicLong;
 @Service
 public class ProductServiceImpl implements ProductService {
 
-    private Map<Long, Product> products = new HashMap<Long, Product>();
+    private Map<Long, Product> products = new HashMap<>();
     private AtomicLong generator = new AtomicLong();
 
     public ProductServiceImpl() {

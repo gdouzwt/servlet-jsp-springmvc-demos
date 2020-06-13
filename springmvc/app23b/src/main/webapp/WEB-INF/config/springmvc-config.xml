@@ -11,8 +11,8 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-  <context:component-scan base-package="app23b.controller"/>
-  <context:component-scan base-package="app23b.formatter"/>
+  <context:component-scan base-package="io.zwt.controller"/>
+  <context:component-scan base-package="io.zwt.formatter"/>
 
   <mvc:annotation-driven conversion-service="conversionService"/>
 
@@ -37,7 +37,7 @@
 
     <property name="formatters">
       <set>
-        <bean class="app23b.formatter.DateFormatter">
+        <bean class="io.zwt.formatter.DateFormatter">
           <constructor-arg type="java.lang.String" value="MM-dd-yyyy"/>
         </bean>
       </set>

@@ -1,0 +1,6 @@
+server:
+    servlet:
+        context-path: /app17a
+logging:
+    level:
+        io.zwt.App17a: off
