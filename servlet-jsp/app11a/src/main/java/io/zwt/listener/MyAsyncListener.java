@@ -2,32 +2,27 @@ package io.zwt.listener;
 
 import javax.servlet.AsyncEvent;
 import javax.servlet.AsyncListener;
-import java.io.IOException;
 
 // do not annotate with @WebListener
 public class MyAsyncListener implements AsyncListener {
 
     @Override
-    public void onComplete(AsyncEvent asyncEvent)
-        throws IOException {
+    public void onComplete(AsyncEvent asyncEvent) {
         System.out.println("onComplete");
     }
 
     @Override
-    public void onError(AsyncEvent asyncEvent)
-        throws IOException {
+    public void onError(AsyncEvent asyncEvent) {
         System.out.println("onError");
     }
 
     @Override
-    public void onStartAsync(AsyncEvent asyncEvent)
-        throws IOException {
+    public void onStartAsync(AsyncEvent asyncEvent) {
         System.out.println("onStartAsync");
     }
 
     @Override
-    public void onTimeout(AsyncEvent asyncEvent)
-        throws IOException {
+    public void onTimeout(AsyncEvent asyncEvent) {
         System.out.println("onTimeout");
     }
 }

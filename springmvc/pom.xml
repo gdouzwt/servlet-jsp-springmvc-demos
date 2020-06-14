@@ -8,7 +8,6 @@
     <groupId>io.zwt</groupId>
     <artifactId>servlet-jsp-springmvc-demos</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <relativePath>../pom.xml</relativePath>
   </parent>
 
   <artifactId>springmvc</artifactId>
@@ -17,7 +16,6 @@
   <packaging>pom</packaging>
 
   <modules>
-    <!-- springmvc -->
     <module>app15a</module>
     <module>app16a</module>
     <module>app16b</module>

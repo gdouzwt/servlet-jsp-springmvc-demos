@@ -21,8 +21,7 @@ public class DownloadCounterFilter implements Filter {
     File logFile;
 
     @Override
-    public void init(FilterConfig filterConfig)
-        throws ServletException {
+    public void init(FilterConfig filterConfig) {
         System.out.println("DownloadCounterFilter");
         String appPath = filterConfig.getServletContext()
             .getRealPath("/");

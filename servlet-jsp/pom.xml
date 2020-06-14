@@ -8,7 +8,6 @@
     <artifactId>servlet-jsp-springmvc-demos</artifactId>
     <groupId>io.zwt</groupId>
     <version>1.0-SNAPSHOT</version>
-    <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
   </parent>
 
   <artifactId>servlet-jsp</artifactId>
@@ -17,7 +16,6 @@
   <packaging>pom</packaging>
 
   <modules>
-    <!-- servlet & jsp -->
     <module>app01a</module>
     <module>app01b</module>
     <module>app01c</module>
@@ -44,10 +42,5 @@
     <module>initializer</module>
     <module>webfragment</module>
   </modules>
-
-  <dependencyManagement>
-    <dependencies>
-    </dependencies>
-  </dependencyManagement>
 
 </project>

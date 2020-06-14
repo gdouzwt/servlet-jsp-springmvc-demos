@@ -5,7 +5,6 @@
     <artifactId>servlet-jsp</artifactId>
     <groupId>io.zwt</groupId>
     <version>1.0-SNAPSHOT</version>
-    <relativePath>../pom.xml</relativePath>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
@@ -13,7 +12,6 @@
   <artifactId>app04a</artifactId>
 
   <dependencies>
-
     <dependency>
       <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>
