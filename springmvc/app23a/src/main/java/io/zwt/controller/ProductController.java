@@ -35,7 +35,7 @@ public class ProductController {
 
         List<MultipartFile> files = product.getImages();
 
-        List<String> fileNames = new ArrayList<String>();
+        List<String> fileNames = new ArrayList<>();
 
         if (null != files && files.size() > 0) {
             for (MultipartFile multipartFile : files) {

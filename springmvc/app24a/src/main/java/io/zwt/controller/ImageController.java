@@ -1,5 +1,6 @@
 package io.zwt.controller;
 
+import lombok.extern.log4j.Log4j2;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 
 @Controller
+@Log4j2
 public class ImageController {
 
     private static final Log logger = LogFactory.getLog(ImageController.class);
@@ -28,6 +30,7 @@ public class ImageController {
             File file = new File(imageDirectory,
                 id + ".jpg");
             if (file.exists()) {
+                log.debug("Hello-------------------------------------------------");
                 response.setContentType("image/jpg");
                 byte[] buffer = new byte[1024];
                 // if you're using Java 7, use try-with-resources

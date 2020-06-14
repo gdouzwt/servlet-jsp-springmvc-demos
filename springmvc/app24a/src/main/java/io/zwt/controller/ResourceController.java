@@ -1,7 +1,6 @@
 package io.zwt.controller;
 
 import io.zwt.domain.Login;
-import lombok.extern.log4j.Log4j2;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
@@ -14,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.*;
 
-@Log4j2
 @Controller
 public class ResourceController {
 

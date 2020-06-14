@@ -5,7 +5,6 @@
     <artifactId>springmvc</artifactId>
     <groupId>io.zwt</groupId>
     <version>1.0-SNAPSHOT</version>
-    <relativePath>../pom.xml</relativePath>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
@@ -25,6 +24,12 @@
     </dependency>
 
     <dependency>
+      <groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-jasper</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <scope>provided</scope>
@@ -35,12 +40,7 @@
       <artifactId>jakarta.servlet.jsp.jstl</artifactId>
     </dependency>
 
-    <!--<dependency>
-      <groupId>org.hibernate.validator</groupId>
-      <artifactId>hibernate-validator</artifactId>
-    </dependency>-->
-
-    <!--<dependency>
+    <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
@@ -50,12 +50,33 @@
           <artifactId>junit-vintage-engine</artifactId>
         </exclusion>
       </exclusions>
-    </dependency>-->
+    </dependency>
   </dependencies>
 
   <build>
-    <finalName>app24a</finalName>
+    <finalName>exec</finalName>
     <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>1</id>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+            <configuration>
+              <attach>false</attach>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <configuration>
+          <warName>app24a</warName>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 

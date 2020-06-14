@@ -1,0 +1,9 @@
+server:
+    servlet:
+        context-path: /app24a
+spring:
+    mvc:
+        view:
+            prefix: /WEB-INF/jsp/
+            suffix: .jsp
+debug: on
