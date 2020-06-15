@@ -29,11 +29,8 @@ public class App24a implements WebApplicationInitializer {
     public void onStartup(ServletContext container) {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
         context.register(App24a.class);
-
-        DispatcherServlet dispatcherServlet = new DispatcherServlet(context);
-
         ServletRegistration.Dynamic registration = container.addServlet("dispatcher",
-            dispatcherServlet);
+            new DispatcherServlet(context));
         registration.setLoadOnStartup(1);
         registration.addMapping("/");
     }
