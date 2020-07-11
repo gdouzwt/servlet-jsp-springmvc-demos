@@ -82,7 +82,7 @@
             uploadNext();
         }
 
-        window.onload = function () {
+        window.onload = function() {
             document.getElementById('files').addEventListener(
                 'change', onFileSelect, false);
             document.getElementById('uploadButton').addEventListener('click', startUpload, false);
